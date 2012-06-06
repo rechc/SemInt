@@ -4,3 +4,5 @@
 *.jar
 *.war
 *.ear
+Szenarios_App/src/sql/Datenbank.ini
+Szenarios_App/bin
