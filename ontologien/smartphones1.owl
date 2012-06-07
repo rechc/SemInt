@@ -565,10 +565,6 @@
     <FunctionalDataProperty>
         <DataProperty IRI="#hatDisplaygröße"/>
     </FunctionalDataProperty>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hatDisplaygröße"/>
-        <Class IRI="#DisplaygrößeEigenschaft"/>
-    </DataPropertyDomain>
 </Ontology>
 
 
