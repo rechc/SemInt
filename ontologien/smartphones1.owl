@@ -11,18 +11,21 @@
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.semanticweb.org/bline_asus/ontologies/2012/5/untitled-ontology-5"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      ontologyIRI="http://www.semanticweb.org/bline_asus/ontologies/2012/5/untitled-ontology-5">
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Declaration>
         <Class IRI="#AkkuEigenschaft"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AndroidNexus"/>
     </Declaration>
     <Declaration>
         <Class IRI="#AppstoreEigenschaft"/>
@@ -110,6 +113,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#NameEigenschaft"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NamedSmartphone"/>
     </Declaration>
     <Declaration>
         <Class IRI="#NetzwerktypEigenschaft"/>
@@ -156,9 +162,70 @@
     <Declaration>
         <DataProperty IRI="#hatDisplaygröße"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#BusinessSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Smartphone"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#ExchangeEigenschaft"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GroßesSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Smartphone"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hatDisplaygröße"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="&xsd;minInclusive">
+                        <Literal datatypeIRI="&xsd;double">4.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#KleinesSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Smartphone"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hatDisplaygröße"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="&xsd;maxExclusive">
+                        <Literal datatypeIRI="&xsd;double">4.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TastaturSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Smartphone"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#HardwaretastaturEigenschaft"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#AkkuEigenschaft"/>
         <Class IRI="#HardwareEigenschaft"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AndroidNexus"/>
+        <Class IRI="#NamedSmartphone"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AndroidNexus"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hatEigenschaft"/>
+            <Class IRI="#HardwaretastaturEigenschaft"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AppstoreEigenschaft"/>
@@ -175,17 +242,6 @@
     <SubClassOf>
         <Class IRI="#BluetoothEigenschaft"/>
         <Class IRI="#KommunikationEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#BusinessSmartphone"/>
-        <Class IRI="#Smartphone"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#BusinessSmartphone"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#ExchangeEigenschaft"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DigitaltastaturEigenschaft"/>
@@ -224,10 +280,6 @@
         <Class IRI="#Eigenschaften"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#GroßesSmartphone"/>
-        <Class IRI="#Smartphone"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#HardwareEigenschaft"/>
         <Class IRI="#Eigenschaften"/>
     </SubClassOf>
@@ -254,16 +306,8 @@
         <Class IRI="#HardwareEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#KleinesSmartphone"/>
-        <Class IRI="#Smartphone"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#KommunikationEigenschaft"/>
         <Class IRI="#HardwareEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Kunde"/>
-        <Class abbreviatedIRI=":Thing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Laie"/>
@@ -299,6 +343,10 @@
     <SubClassOf>
         <Class IRI="#NameEigenschaft"/>
         <Class IRI="#Eigenschaften"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NamedSmartphone"/>
+        <Class IRI="#Smartphone"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#NetzwerktypEigenschaft"/>
@@ -411,7 +459,7 @@
         <Class IRI="#Smartphone"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hatDisplaygröße"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -446,17 +494,6 @@
         <Class IRI="#HardwareEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#TastaturSmartphone"/>
-        <Class IRI="#Smartphone"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#TastaturSmartphone"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#HardwaretastaturEigenschaft"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#WLANEigenschaft"/>
         <Class IRI="#KommunikationEigenschaft"/>
     </SubClassOf>
@@ -489,6 +526,11 @@
         <Class IRI="#HardwaretastaturEigenschaft"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Eigenschaften"/>
+        <Class IRI="#Kunde"/>
+        <Class IRI="#Smartphone"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#FarbeEigenschaft"/>
         <Class IRI="#GewichtEigenschaft"/>
         <Class IRI="#HardwareEigenschaft"/>
@@ -501,6 +543,10 @@
     <DisjointClasses>
         <Class IRI="#Fortgeschritten"/>
         <Class IRI="#Laie"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GroßesSmartphone"/>
+        <Class IRI="#KleinesSmartphone"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Normal"/>
