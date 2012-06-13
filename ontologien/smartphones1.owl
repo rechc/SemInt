@@ -22,16 +22,13 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <Class IRI="#3G"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#4G"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#AndroidBetriebssystemEigenschaft"/>
     </Declaration>
     <Declaration>
         <Class IRI="#AndroidSmartphone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AppStoreSmartphone"/>
     </Declaration>
     <Declaration>
         <Class IRI="#AppleMarke"/>
@@ -91,9 +88,6 @@
         <Class IRI="#GutesObjektiv"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HSDPA"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#HTCMarke"/>
     </Declaration>
     <Declaration>
@@ -128,9 +122,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Kunde"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#LTE"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Laie"/>
@@ -265,7 +256,24 @@
             </ObjectSomeValuesFrom>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#AppstoreEigenschaft"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
                 <Class IRI="#MobilfunknetzEigenschaft"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#AppStoreSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Smartphone"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <ObjectUnionOf>
+                    <Class IRI="#AndroidBetriebssystemEigenschaft"/>
+                    <Class IRI="#IOSBetriebssystemeigenschaft"/>
+                </ObjectUnionOf>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -317,20 +325,20 @@
         <Class IRI="#IPhoneSmartphone"/>
         <ObjectIntersectionOf>
             <Class IRI="#Smartphone"/>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hatEigenschaft"/>
+                    <Class IRI="#HardwaretastaturEigenschaft"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#AppstoreEigenschaft"/>
+            </ObjectSomeValuesFrom>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hatEigenschaft"/>
                 <Class IRI="#IOSBetriebssystemeigenschaft"/>
             </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hatEigenschaft"/>
-                <Class IRI="#MobilfunknetzEigenschaft"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#InternetSmartphone"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#MultimediaSmartphone"/>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hatEigenschaft"/>
                 <Class IRI="#MobilfunknetzEigenschaft"/>
@@ -385,6 +393,10 @@
                 <ObjectProperty IRI="#hatEigenschaft"/>
                 <Class IRI="#AppstoreEigenschaft"/>
             </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#WLANEigenschaft"/>
+            </ObjectSomeValuesFrom>
             <DataSomeValuesFrom>
                 <DataProperty IRI="#hatMhz"/>
                 <DatatypeRestriction>
@@ -406,14 +418,6 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
-    <SubClassOf>
-        <Class IRI="#3G"/>
-        <Class IRI="#MobilfunknetzEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#4G"/>
-        <Class IRI="#MobilfunknetzEigenschaft"/>
-    </SubClassOf>
     <SubClassOf>
         <Class IRI="#AndroidBetriebssystemEigenschaft"/>
         <Class IRI="#BetriebsystemEigenschaft"/>
@@ -479,10 +483,6 @@
         <Class IRI="#KameraEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#HSDPA"/>
-        <Class IRI="#MobilfunknetzEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#HTCMarke"/>
         <Class IRI="#MarkeEigenschaft"/>
     </SubClassOf>
@@ -510,6 +510,10 @@
         <Class IRI="#BetriebsystemEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#InternetSmartphone"/>
+        <Class IRI="#Smartphone"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#KameraEigenschaft"/>
         <Class IRI="#HardwareEigenschaft"/>
     </SubClassOf>
@@ -520,10 +524,6 @@
     <SubClassOf>
         <Class IRI="#KommunikationEigenschaft"/>
         <Class IRI="#HardwareEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#LTE"/>
-        <Class IRI="#MobilfunknetzEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Laie"/>
@@ -656,7 +656,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sehbehindert"/>
-        <Class IRI="#Laie"/>
+        <Class IRI="#Kunde"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Smartphone"/>
@@ -810,12 +810,6 @@
         <Class IRI="#BetriebsystemEigenschaft"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="#3G"/>
-        <Class IRI="#4G"/>
-        <Class IRI="#HSDPA"/>
-        <Class IRI="#LTE"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#AndroidBetriebssystemEigenschaft"/>
         <Class IRI="#IOSBetriebssystemeigenschaft"/>
         <Class IRI="#WindowsBetriebssystemeigenschaft"/>
@@ -855,12 +849,6 @@
     <DisjointClasses>
         <Class IRI="#Metall"/>
         <Class IRI="#Plastik"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Normal"/>
-        <Class IRI="#Sehbehindert"/>
-        <Class IRI="#Spielefreak"/>
-        <Class IRI="#Sudokohengst"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#AndroidSmartphone"/>
