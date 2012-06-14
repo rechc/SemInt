@@ -94,9 +94,6 @@
         <Class IRI="#HardwaretastaturEigenschaft"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HochauflösendSmartphone"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#IOSBetriebssystemeigenschaft"/>
     </Declaration>
     <Declaration>
@@ -145,9 +142,6 @@
         <Class IRI="#NaviSmartphone"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Nexus"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#NokiaMarke"/>
     </Declaration>
     <Declaration>
@@ -158,6 +152,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#NormalesSpieleSmartphone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OutDoorSmartphone"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OutdoorEigenschaft"/>
@@ -371,6 +368,16 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#OutDoorSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Smartphone"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#OutdoorEigenschaft"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#SpieleSmartphone"/>
         <ObjectIntersectionOf>
             <Class IRI="#MultimediaSmartphone"/>
@@ -391,6 +398,10 @@
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hatEigenschaft"/>
                 <Class IRI="#Metall"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#Spritzwasserfest"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -532,17 +543,6 @@
         <Class IRI="#TastaturEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#HochauflösendSmartphone"/>
-        <Class IRI="#Smartphone"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#HochauflösendSmartphone"/>
-        <DataHasValue>
-            <DataProperty IRI="#hatAuflösung"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">800x600</Literal>
-        </DataHasValue>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#IOSBetriebssystemeigenschaft"/>
         <Class IRI="#BetriebsystemEigenschaft"/>
     </SubClassOf>
@@ -612,69 +612,11 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Nexus"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#fürKunde"/>
-            <Class IRI="#Spielefreak"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Nexus"/>
+        <Class IRI="#NaviSmartphone"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#AndroidBetriebssystemEigenschaft"/>
+            <Class IRI="#OutdoorEigenschaft"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Nexus"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#AppstoreEigenschaft"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Nexus"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#MobilfunknetzEigenschaft"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Nexus"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#SamsungMarke"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Nexus"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#WLANEigenschaft"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Nexus"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#fürKunde"/>
-            <ObjectComplementOf>
-                <Class IRI="#Sehbehindert"/>
-            </ObjectComplementOf>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Nexus"/>
-        <DataHasValue>
-            <DataProperty IRI="#hatDisplaygröße"/>
-            <Literal datatypeIRI="&xsd;double">3.0</Literal>
-        </DataHasValue>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Nexus"/>
-        <DataHasValue>
-            <DataProperty IRI="#hatMhz"/>
-            <Literal datatypeIRI="&xsd;integer">1200</Literal>
-        </DataHasValue>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#NokiaMarke"/>
@@ -800,7 +742,7 @@
         <Class IRI="#Smartphone"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hatAuflösung"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
