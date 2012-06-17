@@ -16,22 +16,19 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://www.semanticweb.org/bline_asus/ontologies/2012/5/untitled-ontology-5">
-    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Declaration>
-        <Class IRI="#3G"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#4G"/>
-    </Declaration>
     <Declaration>
         <Class IRI="#AndroidBetriebssystemEigenschaft"/>
     </Declaration>
     <Declaration>
         <Class IRI="#AndroidSmartphone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AppStoreSmartphone"/>
     </Declaration>
     <Declaration>
         <Class IRI="#AppleMarke"/>
@@ -40,13 +37,7 @@
         <Class IRI="#AppstoreEigenschaft"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Bedienbarkeit"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#BetriebsystemEigenschaft"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#BluetoothEigenschaft"/>
     </Declaration>
     <Declaration>
         <Class IRI="#BusinessSmartphone"/>
@@ -55,16 +46,10 @@
         <Class IRI="#DigitaltastaturEigenschaft"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DisplayEigenschaft"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Eigenschaften"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ExchangeEigenschaft"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FarbeEigenschaft"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Fortgeschritten"/>
@@ -73,25 +58,19 @@
         <Class IRI="#GPSEigenschaft"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GewichtEigenschaft"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#GroßesDisplay"/>
+        <Class IRI="#GrosserSpeicherSmartphone"/>
     </Declaration>
     <Declaration>
         <Class IRI="#GroßesSmartphone"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GuteBedienbarkeit"/>
+        <Class IRI="#GuteKameraSmartphone"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GutesAkkuSmartphone"/>
+        <Class IRI="#GuterAkkuSmartphone"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GutesObjektiv"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#HSDPA"/>
+        <Class IRI="#GutesSpieleSmartphone"/>
     </Declaration>
     <Declaration>
         <Class IRI="#HTCMarke"/>
@@ -103,13 +82,10 @@
         <Class IRI="#HardwaretastaturEigenschaft"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HochauflösendSmartphone"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#IOSBetriebssystemeigenschaft"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#IPhoneSmartphone"/>
+        <Class IRI="#IOSSmartphone"/>
     </Declaration>
     <Declaration>
         <Class IRI="#InternetSmartphone"/>
@@ -118,7 +94,10 @@
         <Class IRI="#KameraEigenschaft"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#KleinesDisplay"/>
+        <Class IRI="#KameraSmartphone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#KeineTastaturSmartphone"/>
     </Declaration>
     <Declaration>
         <Class IRI="#KleinesSmartphone"/>
@@ -128,9 +107,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Kunde"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#LTE"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Laie"/>
@@ -145,19 +121,13 @@
         <Class IRI="#Metall"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MhzEigenschaft"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#MobilfunknetzEigenschaft"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MultimediaSmartphone"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#NamedSmartphone"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Nexus"/>
+        <Class IRI="#NaviSmartphone"/>
     </Declaration>
     <Declaration>
         <Class IRI="#NokiaMarke"/>
@@ -166,22 +136,22 @@
         <Class IRI="#Normal"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#NormaleBedienbarkeit"/>
+        <Class IRI="#NormalesSpieleSmartphone"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OutdoorEigenschaft"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#OutdoorSmartphone"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Plastik"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ProfiSmartphone"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#SamsungMarke"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SchlechteBedienbarkeit"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SchlechtesObjektiv"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Sehbehindert"/>
@@ -193,19 +163,19 @@
         <Class IRI="#SoftwareEigenschaft"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SpeicherEigenschaft"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#SpieleSmartphone"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Spielefreak"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Spritzwasserfest"/>
+        <Class IRI="#SportSmartphone"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Sudokohengst"/>
+        <Class IRI="#SpritzwasserfestEigenschaft"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sudokuhengst"/>
     </Declaration>
     <Declaration>
         <Class IRI="#TastaturEigenschaft"/>
@@ -214,13 +184,10 @@
         <Class IRI="#TastaturSmartphone"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#VielSpeicherEigenschaft"/>
+        <Class IRI="#Telefoniereigenschaft"/>
     </Declaration>
     <Declaration>
         <Class IRI="#WLANEigenschaft"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#WenigSpeicherEigenschaft"/>
     </Declaration>
     <Declaration>
         <Class IRI="#WindowsBetriebssystemeigenschaft"/>
@@ -247,10 +214,16 @@
         <DataProperty IRI="#hatDisplaygröße"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hatMhz"/>
+        <DataProperty IRI="#hatMHz"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hatSpeicher"/>
+        <DataProperty IRI="#hatMegaPixel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hatRAM"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hatSpeicherplatz"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Galaxy_Nexus"/>
@@ -263,7 +236,46 @@
                 <ObjectProperty IRI="#hatEigenschaft"/>
                 <Class IRI="#AndroidBetriebssystemEigenschaft"/>
             </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#AppstoreEigenschaft"/>
+            </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#AppStoreSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Smartphone"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <ObjectUnionOf>
+                    <Class IRI="#AndroidBetriebssystemEigenschaft"/>
+                    <Class IRI="#IOSBetriebssystemeigenschaft"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BusinessSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Smartphone"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#ExchangeEigenschaft"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GrosserSpeicherSmartphone"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hatSpeicherplatz"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minExclusive">
+                    <Literal datatypeIRI="&xsd;integer">10000</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#GroßesSmartphone"/>
@@ -281,7 +293,7 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#GutesAkkuSmartphone"/>
+        <Class IRI="#GuterAkkuSmartphone"/>
         <ObjectIntersectionOf>
             <Class IRI="#Smartphone"/>
             <DataSomeValuesFrom>
@@ -296,13 +308,39 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#IPhoneSmartphone"/>
+        <Class IRI="#IOSSmartphone"/>
         <ObjectIntersectionOf>
             <Class IRI="#Smartphone"/>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hatEigenschaft"/>
+                    <Class IRI="#HardwaretastaturEigenschaft"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#AppleMarke"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#AppstoreEigenschaft"/>
+            </ObjectSomeValuesFrom>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hatEigenschaft"/>
                 <Class IRI="#IOSBetriebssystemeigenschaft"/>
             </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#KeineTastaturSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Smartphone"/>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hatEigenschaft"/>
+                    <Class IRI="#HardwaretastaturEigenschaft"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -329,6 +367,116 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#MobilfunknetzEigenschaft"/>
+        <Class IRI="#Telefoniereigenschaft"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MultimediaSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Smartphone"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <ObjectUnionOf>
+                    <Class IRI="#AndroidBetriebssystemEigenschaft"/>
+                    <Class IRI="#IOSBetriebssystemeigenschaft"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NaviSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#GuterAkkuSmartphone"/>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hatEigenschaft"/>
+                    <Class IRI="#GPSEigenschaft"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OutdoorSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Smartphone"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#OutdoorEigenschaft"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ProfiSmartphone"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#BetriebsystemEigenschaft"/>
+            </ObjectSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hatMHz"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="&xsd;minExclusive">
+                        <Literal datatypeIRI="&xsd;integer">1000</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hatRAM"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="&xsd;minExclusive">
+                        <Literal datatypeIRI="&xsd;integer">700</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SpieleSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#MultimediaSmartphone"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#AppstoreEigenschaft"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#WLANEigenschaft"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SportSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Smartphone"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#Metall"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#SpritzwasserfestEigenschaft"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TastaturSmartphone"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Smartphone"/>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#fürKunde"/>
+                    <Class IRI="#Sehbehindert"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#HardwaretastaturEigenschaft"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#WindowsSmartphone"/>
         <ObjectIntersectionOf>
             <Class IRI="#Smartphone"/>
@@ -338,14 +486,6 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
-    <SubClassOf>
-        <Class IRI="#3G"/>
-        <Class IRI="#MobilfunknetzEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#4G"/>
-        <Class IRI="#MobilfunknetzEigenschaft"/>
-    </SubClassOf>
     <SubClassOf>
         <Class IRI="#AndroidBetriebssystemEigenschaft"/>
         <Class IRI="#BetriebsystemEigenschaft"/>
@@ -359,43 +499,16 @@
         <Class IRI="#SoftwareEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Bedienbarkeit"/>
-        <Class IRI="#Eigenschaften"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#BetriebsystemEigenschaft"/>
         <Class IRI="#SoftwareEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#BluetoothEigenschaft"/>
-        <Class IRI="#KommunikationEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#BusinessSmartphone"/>
-        <Class IRI="#Smartphone"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#BusinessSmartphone"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#ExchangeEigenschaft"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DigitaltastaturEigenschaft"/>
         <Class IRI="#TastaturEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DisplayEigenschaft"/>
-        <Class IRI="#HardwareEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#ExchangeEigenschaft"/>
         <Class IRI="#SoftwareEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#FarbeEigenschaft"/>
-        <Class IRI="#Eigenschaften"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Fortgeschritten"/>
@@ -406,24 +519,71 @@
         <Class IRI="#KommunikationEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#GewichtEigenschaft"/>
-        <Class IRI="#Eigenschaften"/>
+        <Class IRI="#GrosserSpeicherSmartphone"/>
+        <Class IRI="#Smartphone"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#GroßesDisplay"/>
-        <Class IRI="#DisplayEigenschaft"/>
+        <Class IRI="#GuteKameraSmartphone"/>
+        <Class IRI="#KameraSmartphone"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#GuteBedienbarkeit"/>
-        <Class IRI="#Bedienbarkeit"/>
+        <Class IRI="#GuteKameraSmartphone"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hatMegaPixel"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="&xsd;minExclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#GutesObjektiv"/>
-        <Class IRI="#KameraEigenschaft"/>
+        <Class IRI="#GuteKameraSmartphone"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hatSpeicherplatz"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="&xsd;minExclusive">
+                    <Literal datatypeIRI="&xsd;integer">10</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#HSDPA"/>
-        <Class IRI="#MobilfunknetzEigenschaft"/>
+        <Class IRI="#GutesSpieleSmartphone"/>
+        <Class IRI="#SpieleSmartphone"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GutesSpieleSmartphone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#fürKunde"/>
+            <Class IRI="#Spielefreak"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GutesSpieleSmartphone"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hatAuflösung"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minExclusive">
+                    <Literal datatypeIRI="&xsd;integer">240</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GutesSpieleSmartphone"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hatMHz"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">1000</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#HTCMarke"/>
@@ -438,46 +598,42 @@
         <Class IRI="#TastaturEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#HochauflösendSmartphone"/>
-        <Class IRI="#Smartphone"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#HochauflösendSmartphone"/>
-        <DataHasValue>
-            <DataProperty IRI="#hatAuflösung"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">800x600</Literal>
-        </DataHasValue>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#IOSBetriebssystemeigenschaft"/>
         <Class IRI="#BetriebsystemEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#InternetSmartphone"/>
-        <Class IRI="#MultimediaSmartphone"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#InternetSmartphone"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#MobilfunknetzEigenschaft"/>
-        </ObjectSomeValuesFrom>
+        <Class IRI="#Smartphone"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#KameraEigenschaft"/>
         <Class IRI="#HardwareEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#KleinesDisplay"/>
-        <Class IRI="#DisplayEigenschaft"/>
+        <Class IRI="#KameraEigenschaft"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hatMegaPixel"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KameraSmartphone"/>
+        <Class IRI="#MultimediaSmartphone"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KameraSmartphone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hatEigenschaft"/>
+            <Class IRI="#KameraEigenschaft"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KeineTastaturSmartphone"/>
+        <Class IRI="#Smartphone"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#KommunikationEigenschaft"/>
         <Class IRI="#HardwareEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#LTE"/>
-        <Class IRI="#MobilfunknetzEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Laie"/>
@@ -496,47 +652,12 @@
         <Class IRI="#MaterialEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MhzEigenschaft"/>
-        <Class IRI="#HardwareEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#MobilfunknetzEigenschaft"/>
         <Class IRI="#KommunikationEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MultimediaSmartphone"/>
-        <Class IRI="#Smartphone"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#NamedSmartphone"/>
-        <Class IRI="#Smartphone"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Nexus"/>
-        <Class IRI="#NamedSmartphone"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Nexus"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#AndroidBetriebssystemEigenschaft"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Nexus"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#fürKunde"/>
-            <ObjectComplementOf>
-                <Class IRI="#Sehbehindert"/>
-            </ObjectComplementOf>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Nexus"/>
-        <DataHasValue>
-            <DataProperty IRI="#hatDisplaygröße"/>
-            <Literal datatypeIRI="&xsd;double">3.0</Literal>
-        </DataHasValue>
+        <Class IRI="#NaviSmartphone"/>
+        <Class IRI="#GuterAkkuSmartphone"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#NokiaMarke"/>
@@ -547,8 +668,15 @@
         <Class IRI="#Laie"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#NormaleBedienbarkeit"/>
-        <Class IRI="#Bedienbarkeit"/>
+        <Class IRI="#NormalesSpieleSmartphone"/>
+        <Class IRI="#SpieleSmartphone"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NormalesSpieleSmartphone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#fürKunde"/>
+            <Class IRI="#Sudokuhengst"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OutdoorEigenschaft"/>
@@ -559,20 +687,16 @@
         <Class IRI="#MaterialEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ProfiSmartphone"/>
+        <Class IRI="#Smartphone"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#SamsungMarke"/>
         <Class IRI="#MarkeEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SchlechteBedienbarkeit"/>
-        <Class IRI="#Bedienbarkeit"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SchlechtesObjektiv"/>
-        <Class IRI="#KameraEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Sehbehindert"/>
-        <Class IRI="#Laie"/>
+        <Class IRI="#Kunde"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Smartphone"/>
@@ -586,27 +710,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hatEigenschaft"/>
             <Class IRI="#BetriebsystemEigenschaft"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Smartphone"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#DisplayEigenschaft"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Smartphone"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#FarbeEigenschaft"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Smartphone"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#GewichtEigenschaft"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -634,14 +737,7 @@
         <Class IRI="#Smartphone"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#MhzEigenschaft"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Smartphone"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#SpeicherEigenschaft"/>
+            <Class IRI="#MobilfunknetzEigenschaft"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -655,7 +751,7 @@
         <Class IRI="#Smartphone"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hatAuflösung"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -670,49 +766,15 @@
         <Class IRI="#Eigenschaften"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SpeicherEigenschaft"/>
-        <Class IRI="#HardwareEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SpieleSmartphone"/>
-        <Class IRI="#MultimediaSmartphone"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SpieleSmartphone"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#fürKunde"/>
-            <Class IRI="#Spielefreak"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SpieleSmartphone"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#AppstoreEigenschaft"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SpieleSmartphone"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hatMhz"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">1000</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Spielefreak"/>
         <Class IRI="#Laie"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Spritzwasserfest"/>
+        <Class IRI="#SpritzwasserfestEigenschaft"/>
         <Class IRI="#OutdoorEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Sudokohengst"/>
+        <Class IRI="#Sudokuhengst"/>
         <Class IRI="#Laie"/>
     </SubClassOf>
     <SubClassOf>
@@ -720,47 +782,17 @@
         <Class IRI="#HardwareEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#TastaturSmartphone"/>
-        <Class IRI="#Smartphone"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#TastaturSmartphone"/>
-        <ObjectComplementOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#fürKunde"/>
-                <Class IRI="#Sehbehindert"/>
-            </ObjectSomeValuesFrom>
-        </ObjectComplementOf>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#TastaturSmartphone"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hatEigenschaft"/>
-            <Class IRI="#HardwaretastaturEigenschaft"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#VielSpeicherEigenschaft"/>
-        <Class IRI="#SpeicherEigenschaft"/>
+        <Class IRI="#Telefoniereigenschaft"/>
+        <Class IRI="#Eigenschaften"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#WLANEigenschaft"/>
         <Class IRI="#KommunikationEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#WenigSpeicherEigenschaft"/>
-        <Class IRI="#SpeicherEigenschaft"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#WindowsBetriebssystemeigenschaft"/>
         <Class IRI="#BetriebsystemEigenschaft"/>
     </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="#3G"/>
-        <Class IRI="#4G"/>
-        <Class IRI="#HSDPA"/>
-        <Class IRI="#LTE"/>
-    </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#AndroidBetriebssystemEigenschaft"/>
         <Class IRI="#IOSBetriebssystemeigenschaft"/>
@@ -768,7 +800,8 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#AndroidSmartphone"/>
-        <Class IRI="#IPhoneSmartphone"/>
+        <Class IRI="#IOSSmartphone"/>
+        <Class IRI="#WindowsSmartphone"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#AppleMarke"/>
@@ -779,6 +812,10 @@
     <DisjointClasses>
         <Class IRI="#AppstoreEigenschaft"/>
         <Class IRI="#BetriebsystemEigenschaft"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BusinessSmartphone"/>
+        <Class IRI="#SportSmartphone"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DigitaltastaturEigenschaft"/>
@@ -798,14 +835,12 @@
         <Class IRI="#KleinesSmartphone"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Metall"/>
-        <Class IRI="#Plastik"/>
+        <Class IRI="#IOSSmartphone"/>
+        <Class IRI="#TastaturSmartphone"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Normal"/>
-        <Class IRI="#Sehbehindert"/>
-        <Class IRI="#Spielefreak"/>
-        <Class IRI="#Sudokohengst"/>
+        <Class IRI="#Metall"/>
+        <Class IRI="#Plastik"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#AndroidSmartphone"/>
@@ -849,10 +884,6 @@
         <ObjectProperty IRI="#istEigenschaftVon"/>
         <Class IRI="#Smartphone"/>
     </ObjectPropertyRange>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hatMhz"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
     <FunctionalDataProperty>
         <DataProperty IRI="#hatAkkuDauer"/>
     </FunctionalDataProperty>
@@ -863,11 +894,11 @@
         <DataProperty IRI="#hatDisplaygröße"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="#hatMhz"/>
+        <DataProperty IRI="#hatMHz"/>
     </FunctionalDataProperty>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 3.2.5.1928) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
 
