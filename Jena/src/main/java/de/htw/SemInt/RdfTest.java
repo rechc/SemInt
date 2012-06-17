@@ -8,7 +8,7 @@ import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 
 
-public class App 
+public class RdfTest 
 {
     public static void main( String[] args )
     {
