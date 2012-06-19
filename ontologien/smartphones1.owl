@@ -226,6 +226,9 @@
         <DataProperty IRI="#hatMegaPixel"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hatPreis"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hatRAM"/>
     </Declaration>
     <Declaration>
@@ -418,10 +421,6 @@
     <EquivalentClasses>
         <Class IRI="#ProfiSmartphone"/>
         <ObjectIntersectionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hatEigenschaft"/>
-                <Class IRI="#BetriebsystemEigenschaft"/>
-            </ObjectSomeValuesFrom>
             <DataSomeValuesFrom>
                 <DataProperty IRI="#hatMHz"/>
                 <DatatypeRestriction>
@@ -787,6 +786,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="#hatDisplaygröße"/>
             <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smartphone"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hatPreis"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
