@@ -40,6 +40,9 @@
         <Class IRI="#BetriebsystemEigenschaft"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#BilderMachenZweck"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#BusinessSmartphone"/>
     </Declaration>
     <Declaration>
@@ -91,6 +94,9 @@
         <Class IRI="#InternetSmartphone"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#InternetZweck"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#KameraEigenschaft"/>
     </Declaration>
     <Declaration>
@@ -130,6 +136,9 @@
         <Class IRI="#NaviSmartphone"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#NavigationEigenschaft"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#NokiaMarke"/>
     </Declaration>
     <Declaration>
@@ -151,10 +160,16 @@
         <Class IRI="#ProfiSmartphone"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Reisender"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#RouteAufzeichnenEigenschaft"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#RoutenAufzeichnungsSmartphone"/>
+        <Class IRI="#RoutenaufzeichnungEigenschaft"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SMSZweck"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SamsungMarke"/>
@@ -172,10 +187,16 @@
         <Class IRI="#SpieleSmartphone"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#SpieleZweck"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Spielefreak"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SportSmartphone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sportler"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SpritzwasserfestEigenschaft"/>
@@ -193,7 +214,13 @@
         <Class IRI="#Telefoniereigenschaft"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#TelefonierenZweck"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#WLANEigenschaft"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wanderer"/>
     </Declaration>
     <Declaration>
         <Class IRI="#WindowsBetriebssystemeigenschaft"/>
@@ -202,10 +229,16 @@
         <Class IRI="#WindowsSmartphone"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Zweck"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#fürKunde"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hatEigenschaft"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hatZweck"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#istEigenschaftVon"/>
@@ -276,15 +309,28 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#GrosserSpeicherSmartphone"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hatSpeicherplatz"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minExclusive">
-                    <Literal datatypeIRI="&xsd;integer">10000</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataSomeValuesFrom>
+        <ObjectIntersectionOf>
+            <Class IRI="#Smartphone"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hatZweck"/>
+                    <Class IRI="#BilderMachenZweck"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hatZweck"/>
+                    <Class IRI="#SpieleZweck"/>
+                </ObjectSomeValuesFrom>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="#hatSpeicherplatz"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:integer"/>
+                        <FacetRestriction facet="&xsd;minExclusive">
+                            <Literal datatypeIRI="&xsd;integer">1000</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#GroßesSmartphone"/>
@@ -393,25 +439,19 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#NaviSmartphone"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#GuterAkkuSmartphone"/>
-            <ObjectComplementOf>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty IRI="#hatEigenschaft"/>
-                    <Class IRI="#GPSEigenschaft"/>
-                </ObjectSomeValuesFrom>
-            </ObjectComplementOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hatEigenschaft"/>
-                <Class IRI="#RouteAufzeichnenEigenschaft"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#OutdoorSmartphone"/>
         <ObjectIntersectionOf>
             <Class IRI="#Smartphone"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#fürKunde"/>
+                    <Class IRI="#Sportler"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#fürKunde"/>
+                    <Class IRI="#Wanderer"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hatEigenschaft"/>
                 <Class IRI="#OutdoorEigenschaft"/>
@@ -442,16 +482,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#RoutenAufzeichnungsSmartphone"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Smartphone"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hatEigenschaft"/>
-                <Class IRI="#RouteAufzeichnenEigenschaft"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#SpieleSmartphone"/>
         <ObjectIntersectionOf>
             <Class IRI="#MultimediaSmartphone"/>
@@ -463,23 +493,9 @@
                 <ObjectProperty IRI="#hatEigenschaft"/>
                 <Class IRI="#WLANEigenschaft"/>
             </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#SportSmartphone"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Smartphone"/>
             <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hatEigenschaft"/>
-                <Class IRI="#Metall"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hatEigenschaft"/>
-                <Class IRI="#RouteAufzeichnenEigenschaft"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hatEigenschaft"/>
-                <Class IRI="#SpritzwasserfestEigenschaft"/>
+                <ObjectProperty IRI="#hatZweck"/>
+                <Class IRI="#SpieleZweck"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -526,6 +542,10 @@
         <Class IRI="#SoftwareEigenschaft"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#BilderMachenZweck"/>
+        <Class IRI="#Zweck"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#DigitaltastaturEigenschaft"/>
         <Class IRI="#TastaturEigenschaft"/>
     </SubClassOf>
@@ -557,18 +577,6 @@
                 <Datatype abbreviatedIRI="xsd:float"/>
                 <FacetRestriction facet="&xsd;minExclusive">
                     <Literal datatypeIRI="&xsd;integer">5</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#GuteKameraSmartphone"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hatSpeicherplatz"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:float"/>
-                <FacetRestriction facet="&xsd;minExclusive">
-                    <Literal datatypeIRI="&xsd;integer">10</Literal>
                 </FacetRestriction>
             </DatatypeRestriction>
         </DataSomeValuesFrom>
@@ -629,6 +637,10 @@
         <Class IRI="#Smartphone"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#InternetZweck"/>
+        <Class IRI="#Zweck"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#KameraEigenschaft"/>
         <Class IRI="#HardwareEigenschaft"/>
     </SubClassOf>
@@ -648,6 +660,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hatEigenschaft"/>
             <Class IRI="#KameraEigenschaft"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KameraSmartphone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hatZweck"/>
+            <Class IRI="#BilderMachenZweck"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -683,6 +702,34 @@
         <Class IRI="#GuterAkkuSmartphone"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#NaviSmartphone"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#fürKunde"/>
+                <Class IRI="#Reisender"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#fürKunde"/>
+                <Class IRI="#Sportler"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#fürKunde"/>
+                <Class IRI="#Wanderer"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NaviSmartphone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hatEigenschaft"/>
+            <Class IRI="#NavigationEigenschaft"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NavigationEigenschaft"/>
+        <Class IRI="#GPSEigenschaft"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#NokiaMarke"/>
         <Class IRI="#MarkeEigenschaft"/>
     </SubClassOf>
@@ -714,8 +761,20 @@
         <Class IRI="#Smartphone"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Reisender"/>
+        <Class IRI="#Kunde"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#RouteAufzeichnenEigenschaft"/>
         <Class IRI="#Eigenschaften"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoutenaufzeichnungEigenschaft"/>
+        <Class IRI="#GPSEigenschaft"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SMSZweck"/>
+        <Class IRI="#Zweck"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SamsungMarke"/>
@@ -776,6 +835,34 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Smartphone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hatZweck"/>
+            <Class IRI="#InternetZweck"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smartphone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hatZweck"/>
+            <Class IRI="#SMSZweck"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smartphone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hatZweck"/>
+            <Class IRI="#TelefonierenZweck"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smartphone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hatZweck"/>
+            <Class IRI="#Zweck"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smartphone"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hatAuflösung"/>
             <Datatype abbreviatedIRI="xsd:integer"/>
@@ -800,8 +887,41 @@
         <Class IRI="#Eigenschaften"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#SpieleZweck"/>
+        <Class IRI="#Zweck"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Spielefreak"/>
         <Class IRI="#Laie"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SportSmartphone"/>
+        <Class IRI="#Smartphone"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SportSmartphone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#fürKunde"/>
+            <Class IRI="#Sportler"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SportSmartphone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hatEigenschaft"/>
+            <Class IRI="#Metall"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SportSmartphone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hatEigenschaft"/>
+            <Class IRI="#SpritzwasserfestEigenschaft"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sportler"/>
+        <Class IRI="#Kunde"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SpritzwasserfestEigenschaft"/>
@@ -820,8 +940,16 @@
         <Class IRI="#Eigenschaften"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#TelefonierenZweck"/>
+        <Class IRI="#Zweck"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#WLANEigenschaft"/>
         <Class IRI="#KommunikationEigenschaft"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wanderer"/>
+        <Class IRI="#Kunde"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#WindowsBetriebssystemeigenschaft"/>
@@ -934,5 +1062,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.5.1928) http://owlapi.sourceforge.net -->
 
