@@ -282,6 +282,10 @@
                 <ObjectProperty IRI="#hatEigenschaft"/>
                 <Class IRI="#AppstoreEigenschaft"/>
             </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hatEigenschaft"/>
+                <Class IRI="#SamsungMarke"/>
+            </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -485,6 +489,10 @@
         <Class IRI="#SpieleSmartphone"/>
         <ObjectIntersectionOf>
             <Class IRI="#MultimediaSmartphone"/>
+            <ObjectUnionOf>
+                <Class IRI="#GutesSpieleSmartphone"/>
+                <Class IRI="#NormalesSpieleSmartphone"/>
+            </ObjectUnionOf>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hatEigenschaft"/>
                 <Class IRI="#AppstoreEigenschaft"/>
